@@ -6,74 +6,16 @@ body {
     font-family: 'OCR A', monospace;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/* ... kode lainnya ... */
 
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #00ff00;
-}
-
-.name {
-    font-size: 2em;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
-.bio {
-    font-size: 1em;
-    margin: 10px 0;
-}
-
-.links {
-    margin-top: 20px;
-}
-
-.link-button {
-    display: block;
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    color: #00ff00;
-    text-decoration: none;
-    border: 2px solid #00ff00;
-    background-color: transparent;
-    transition: all 0.3s ease;
-}
-
-.link-button:hover {
-    background-color: #00ff00;
-    color: #0a0a0a;
-    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-}
 .glitch {
     text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; /* Gaya glitch */
 }
-#typed-output {
-  font-family: 'Courier New', monospace;
-  font-size: 24px;
-  color: #00ff00;
-  text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
-  animation: glitch 1s infinite;
-}
 
-@keyframes glitch {
-  0% {
+#typed-output {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    color: #00ff00;
     text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
-  }
-  50% {
-    text-shadow: 1px 1px #ff0000, -1px -1px #00ff00;
-  }
-  100% {
-    text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
-  }
+    animation: glitch 1s infinite;
 }
