@@ -16,12 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const hackedMessage = document.getElementById("hackedMessage");
     const glitchEffect = document.getElementById("glitchEffect");
 
-    // Cek apakah semua elemen ditemukan
-    if (!statusText || !loadingScreen || !hackedMessage || !glitchEffect) {
-        console.error("One or more required elements are missing!");
-        return; // Hentikan eksekusi jika ada elemen yang hilang
-    }
-
     // Sequence of loading messages with extended durations
     setTimeout(() => {
         statusText.innerText = "Initializing...";
@@ -44,21 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show video and hacked message after Access Granted
     setTimeout(() => {
         loadingScreen.style.display = "none"; // Hide loading screen
-        glitchEffect.style.display = "block"; // Show video
-        hackedMessage.style.display = "block"; // Show hacked message
-        startGlitchEffect(); // Start the glitch effect on the hacked message
+        setTimeout(() => {
+            glitchEffect.style.display = "block"; // Show video
+            hackedMessage.style.display = "block"; // Show hacked message
+            startGlitchEffect(); // Start the glitch effect on the hacked message
+        }, 1000); // Delay 1 detik sebelum menampilkan video dan pesan hacked
     }, 9000);
 });
 
 function startGlitchEffect() {
     const hackedMessage = document.getElementById("hackedMessage");
-    
-    if (!hackedMessage) {
-        console.error("Hacked message element not found!");
-        return; // Hentikan eksekusi jika elemen hilang
-    }
-
     setInterval(() => {
         hackedMessage.classList.toggle('glitch');
-    }, 1000);
+    }, 1000); // Change the 'glitch' class every 1 second
 }
+
