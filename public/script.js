@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const hackedMessage = document.getElementById("hackedMessage");
     const glitchEffect = document.getElementById("glitchEffect");
 
+    // Tambahkan event listener untuk memastikan video dapat diputar
+    glitchEffect.addEventListener("canplaythrough", () => {
+        glitchEffect.style.display = "block"; // Tampilkan video
+        hackedMessage.style.display = "block"; // Tampilkan pesan hack
+        startGlitchEffect(); // Mulai efek glitch pada pesan hack
+    });
+
     // Sequence of loading messages with extended durations
     setTimeout(() => {
         statusText.innerText = "Initializing...";
