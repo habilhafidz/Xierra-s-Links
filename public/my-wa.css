@@ -16,6 +16,10 @@ body, html {
     z-index: 2; /* Teks berada di atas video */
 }
 
+video{
+    max-width: 1600px;
+}
+
 #glitchEffect {
     position: absolute;
     top: 0;
