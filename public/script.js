@@ -19,37 +19,35 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sequence of loading messages with extended durations
     setTimeout(() => {
         statusText.innerText = "Initializing...";
-        statusText.classList.add('glitch');
-        setTimeout(() => statusText.classList.remove('glitch'), 500);
-    }, 0);
+        statusText.classList.add('glitch'); // Menambahkan efek glitch
+        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
+    }, 0); // Menampilkan pesan pertama
 
     setTimeout(() => {
         statusText.innerText = "Connecting to server...";
-        statusText.classList.add('glitch');
-        setTimeout(() => statusText.classList.remove('glitch'), 500);
-    }, 3000);
+        statusText.classList.add('glitch'); // Menambahkan efek glitch
+        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
+    }, 3000); // Menampilkan pesan kedua setelah 3 detik
 
     setTimeout(() => {
         statusText.innerText = "Access Granted!";
-        statusText.classList.add('glitch');
-        setTimeout(() => statusText.classList.remove('glitch'), 500);
-    }, 6000);
+        statusText.classList.add('glitch'); // Menambahkan efek glitch
+        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
+    }, 6000); // Menampilkan pesan ketiga setelah 6 detik
 
-    // Show video and hacked message after Access Granted
+    // Show glitch effect after Access Granted
     setTimeout(() => {
         loadingScreen.style.display = "none"; // Hide loading screen
-        setTimeout(() => {
-            glitchEffect.style.display = "block"; // Show video
-            hackedMessage.style.display = "block"; // Show hacked message
-            startGlitchEffect(); // Start the glitch effect on the hacked message
-        }, 1000); // Delay 1 detik sebelum menampilkan video dan pesan hacked
-    }, 9000);
+        glitchEffect.style.display = "block"; // Show video after Access Granted
+        hackedMessage.style.display = "block"; // Show hacked message
+        startGlitchEffect(); // Start the glitch effect on the hacked message
+    }, 9000); // Menampilkan efek glitch setelah total 9 detik
 });
 
 function startGlitchEffect() {
     const hackedMessage = document.getElementById("hackedMessage");
     setInterval(() => {
-        hackedMessage.classList.toggle('glitch');
+        hackedMessage.classList.toggle('glitch'); // Toggle the glitch class
     }, 1000); // Change the 'glitch' class every 1 second
 }
 
