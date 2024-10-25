@@ -15,44 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const hackedMessage = document.getElementById("hackedMessage");
     const glitchEffect = document.getElementById("glitchEffect");
 
-    // Tambahkan event listener untuk memastikan video dapat diputar
-    glitchEffect.addEventListener("canplaythrough", () => {
-        glitchEffect.style.display = "block"; // Tampilkan video
-        hackedMessage.style.display = "block"; // Tampilkan pesan hack
-        startGlitchEffect(); // Mulai efek glitch pada pesan hack
-    });
-
     // Sequence of loading messages with extended durations
     setTimeout(() => {
         statusText.innerText = "Initializing...";
-        statusText.classList.add('glitch'); // Menambahkan efek glitch
-        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
-    }, 0); // Menampilkan pesan pertama
+        statusText.classList.add('glitch');
+        setTimeout(() => statusText.classList.remove('glitch'), 500);
+    }, 0);
 
     setTimeout(() => {
         statusText.innerText = "Connecting to server...";
-        statusText.classList.add('glitch'); // Menambahkan efek glitch
-        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
-    }, 3000); // Menampilkan pesan kedua setelah 3 detik
+        statusText.classList.add('glitch');
+        setTimeout(() => statusText.classList.remove('glitch'), 500);
+    }, 3000);
 
     setTimeout(() => {
         statusText.innerText = "Access Granted!";
-        statusText.classList.add('glitch'); // Menambahkan efek glitch
-        setTimeout(() => statusText.classList.remove('glitch'), 500); // Menghapus glitch setelah 0.5 detik
-    }, 6000); // Menampilkan pesan ketiga setelah 6 detik
+        statusText.classList.add('glitch');
+        setTimeout(() => statusText.classList.remove('glitch'), 500);
+    }, 6000);
 
-    // Show glitch effect after Access Granted
+    // Show video and hacked message after Access Granted
     setTimeout(() => {
         loadingScreen.style.display = "none"; // Hide loading screen
-        glitchEffect.style.display = "block"; // Show video after Access Granted
+        glitchEffect.style.display = "block"; // Show video
         hackedMessage.style.display = "block"; // Show hacked message
         startGlitchEffect(); // Start the glitch effect on the hacked message
-    }, 9000); // Menampilkan efek glitch setelah total 9 detik
+    }, 9000);
 });
 
 function startGlitchEffect() {
     const hackedMessage = document.getElementById("hackedMessage");
     setInterval(() => {
-        hackedMessage.classList.toggle('glitch'); // Toggle the glitch class
-    }, 1000); // Change the 'glitch' class every 1 second
+        hackedMessage.classList.toggle('glitch');
+    }, 1000);
+}
+// Change the 'glitch' class every 1 second
 }
