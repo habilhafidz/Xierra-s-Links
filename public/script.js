@@ -9,11 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //my-wa.html//
 
+// my-wa.html
 document.addEventListener("DOMContentLoaded", function () {
     const statusText = document.getElementById("statusText");
     const loadingScreen = document.getElementById("loadingScreen");
     const hackedMessage = document.getElementById("hackedMessage");
     const glitchEffect = document.getElementById("glitchEffect");
+
+    // Cek apakah semua elemen ditemukan
+    if (!statusText || !loadingScreen || !hackedMessage || !glitchEffect) {
+        console.error("One or more required elements are missing!");
+        return; // Hentikan eksekusi jika ada elemen yang hilang
+    }
 
     // Sequence of loading messages with extended durations
     setTimeout(() => {
@@ -45,9 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGlitchEffect() {
     const hackedMessage = document.getElementById("hackedMessage");
+    
+    if (!hackedMessage) {
+        console.error("Hacked message element not found!");
+        return; // Hentikan eksekusi jika elemen hilang
+    }
+
     setInterval(() => {
         hackedMessage.classList.toggle('glitch');
     }, 1000);
-}
-// Change the 'glitch' class every 1 second
 }
