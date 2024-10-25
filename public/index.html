@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xierra's Links</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Menghubungkan CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="container">
+  <div class="profile">
+    <img src="avatar.png" alt="Profile Picture" class="avatar">
+    <h1 class="name">Xierra's Links</h1>
+    <p class="bio">Hacker | Programmer | Cyber Enthusiast</p>
+  </div>
+  <div class="links">
+    <a href="https://x.com/senatavia" class="link-button">Twitter (X)</a>
+    <a href="/my-wa" class="link-button">WhatsApp</a>
+    <a href="https://www.instagram.com/keskyy_/" class="link-button">Instagram</a>
+  </div>
+</div>
+<script src="script.js"></script> <!-- Menghubungkan JavaScript -->
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<div id="typed-output"></div>
+
+<script>
+  var typed = new Typed('#typed-output', {
+    strings: ["Initializing... ^1000", "Connecting to server... ^1500", "Access granted! ^1000"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
+</script>
+</body>
+</html>

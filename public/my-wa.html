@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xierra Link - My WA</title>
+    <link rel="stylesheet" href="my-wa.css">
+</head>
+<body>
+<div id="particles-js"></div>
+
+<video id="glitchEffect" src="background.mp4" autoplay muted loop style="display: none;"></video>
+<div id="loadingScreen" class="center-text">
+    <p id="statusText" class="glitch">Initializing...</p>
+</div>
+
+<div id="hackedMessage" class="center-text" style="display: none;"> <!-- Mulai dengan hidden -->
+    <h1>You have been HACKED!!!</h1>
+    <p>WhatsApp not available</p>
+</div>
+
+<div id="typed-output"></div>
+<script src="script.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+</body>
+</html>

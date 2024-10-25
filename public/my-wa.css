@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #0f0;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Teks berada di atas video */
+}
+
+#glitchEffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1; /* Video di bawah teks */
+    opacity: 0.7; /* Jika perlu, bisa diatur lebih rendah */
+}
+
+#loadingScreen {
+    z-index: 2; /* Loading screen tetap di atas */
+}
+
+#hackedMessage {
+    display: none; /* Mulai dengan hidden */
+    z-index: 2; /* Teks ini juga di atas video */
+}
+
+.glitch {
+    animation: glitch 0.3s; /* Durasi glitch */
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
+    }
+    50% {
+        text-shadow: 1px 1px #ff0000, -1px -1px #00ff00;
+    }
+    100% {
+        text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
+    }
+}

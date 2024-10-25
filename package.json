@@ -1,0 +1,27 @@
+{
+  "name": "cyberlinks",
+  "version": "1.0.0",
+  "description": "Deskripsi proyek CyberLinks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/habilhafidz/Xierra-s-Links.git"
+  },
+  "keywords": [
+    "web",
+    "links",
+    "X",
+    "Instagram",
+    "WhatsApp",
+    "application",
+    "nodejs"
+  ],
+  "author": "Xierra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
